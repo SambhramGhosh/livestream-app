@@ -6,7 +6,6 @@ A full-stack application for managing real-time overlays on livestreams. Built w
 
 ## 📋 Table of Contents
 
-- [0️⃣ Install FFmpeg](#️⃣-0-install-ffmpeg-required-for-streaming)
 - [Features](#-features)
 - [Tech Stack](#-tech-stack)
 - [Prerequisites](#-prerequisites)
