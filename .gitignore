@@ -1,0 +1,47 @@
+# --- Global ignores ---
+*.log
+*.pyc
+*.pyo
+*.pyd
+*.DS_Store
+.env
+__pycache__/
+.vscode/
+.idea/
+*.bak
+*.swp
+*.tmp
+
+# --- Backend specific ---
+backend/__pycache__/
+backend/.env
+backend/static/stream/
+backend/instance/
+backend/.pytest_cache/
+backend/.mypy_cache/
+backend/.coverage
+backend/*.sqlite3
+backend/*.db
+
+# --- Frontend specific ---
+front-end/node_modules/
+front-end/.env
+front-end/dist/
+front-end/.vite/
+front-end/.cache/
+front-end/.eslintcache
+
+# --- OS / Editor specific ---
+Thumbs.db
+ehthumbs.db
+*.iml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# --- Python virtual environment ---
+venv/
+env/
+.venv/
+ENV/
