@@ -160,14 +160,27 @@ docker-compose up -d          # Run again
 
 Inside `backend/`, create a `.env` file:
 ```bash
+
 MONGO_URI=mongodb://root:example@localhost:27017
-MONGO_DB=livestream
+MONGO_DB=livestream-mongo
 OVERLAYS_COLLECTION=overlays
-FFMPEG_BIN=ffmpeg
-RTSP_URL=rtsp://rtspstream:2cfdF7q6qy4iz2B0-zgcZ@zephyr.rtsp.stream/movie
+
+
+# Where HLS files will be written
 STREAM_OUTPUT_DIR=./static/stream
 HLS_PLAYLIST=live.m3u8
-FLASK_ENV=development
+
+
+# RTSP URL
+RTSP_URL=rtsp://rtspstream:2cfdF7q6qy4iz2B0-zgcZ@zephyr.rtsp.stream/movie
+
+
+# ffmpeg binary if not on PATH
+FFMPEG_BIN=ffmpeg
+
+
+# Flask port
+PORT=5000
 ```
 
 > 🧠 **Tip**: If that RTSP feed doesn't work, replace it with:
@@ -214,17 +227,17 @@ python app.py
 
 ---
 
-### 💻 6️⃣ Configure Frontend
+### 💻 6️⃣ Configure front-end
 
-Go to the frontend folder:
+Go to the front-end folder:
 ```bash
-cd ../frontend
+cd ../front-end
 ```
 
 Create a `.env` file:
 ```bash
 VITE_API_URL=http://localhost:5000
-VITE_HLS_PATH=http://localhost:5000/stream/live.m3u8
+VITE_HLS_PATH=/stream/live.m3u8
 ```
 
 **Install dependencies:**
@@ -237,7 +250,7 @@ npm install
 npm run dev
 ```
 
-Frontend will run at: `http://localhost:5173`
+front-end will run at: `http://localhost:5173`
 
 ---
 
