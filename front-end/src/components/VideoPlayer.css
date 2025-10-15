@@ -1,0 +1,19 @@
+.player-wrap { position: relative; width: 100%; max-width: 900px; margin: auto; }
+.video-container { position: relative; background: #000; overflow: hidden; border-radius: 12px; }
+.video-element { width: 100%; height: auto; display: block; }
+.player-controls {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(0,0,0,0.4);
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+.btn-play { font-size: 1.2rem; color: #fff; background: none; border: none; cursor: pointer; }
+.btn-play:hover { opacity: 0.8; }
+.volume-control { display: flex; align-items: center; gap: 6px; }
+.volume-icon { color: #fff; }
+.volume-control input[type=range] { width: 80px; }

@@ -1,0 +1,63 @@
+.editor-card {
+  background: #1f1f2e;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;            /* make card responsive */
+  max-width: 320px;       /* max width to keep it compact */
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  box-sizing: border-box; /* include padding in width */
+}
+
+.editor-section {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.editor-section input,
+.editor-section select {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #2c2c3a;
+  color: #fff;
+  width: 100%;          /* full width inside card */
+  box-sizing: border-box;
+}
+
+.editor-section.grid-xy {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.editor-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;       /* allow buttons to wrap if needed */
+}
+
+.overlay-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 200px;
+  overflow-y: auto;      /* prevent overflow if list is long */
+}
+
+.overlay-item {
+  background: #2c2c3a;
+  padding: 8px 10px;    /* slightly larger padding */
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  box-sizing: border-box;
+}
